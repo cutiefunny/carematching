@@ -17,7 +17,7 @@
 }
 
 .logo {
-  width: 100%; /* 로고 이미지 크기 */
+  width: 80%; /* 로고 이미지 크기 */
   height: auto; /* 비율 유지 */
   margin-bottom: 10px;
 }
