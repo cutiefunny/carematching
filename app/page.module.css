@@ -1,167 +1,204 @@
-.page {
-  --gray-rgb: 0, 0, 0;
-  --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
-  --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
-
-  --button-primary-hover: #383838;
-  --button-secondary-hover: #f2f2f2;
-
-  display: grid;
-  grid-template-rows: 20px 1fr 20px;
-  align-items: center;
-  justify-items: center;
-  min-height: 100svh;
-  padding: 80px;
-  gap: 64px;
-  font-family: var(--font-geist-sans);
-}
-
-@media (prefers-color-scheme: dark) {
-  .page {
-    --gray-rgb: 255, 255, 255;
-    --gray-alpha-200: rgba(var(--gray-rgb), 0.145);
-    --gray-alpha-100: rgba(var(--gray-rgb), 0.06);
-
-    --button-primary-hover: #ccc;
-    --button-secondary-hover: #1a1a1a;
-  }
-}
-
-.main {
+/* 전체 컨테이너 스타일 */
+.container {
   display: flex;
   flex-direction: column;
-  gap: 32px;
-  grid-row-start: 2;
+  align-items: center; /* 가로 중앙 정렬 */
+  justify-content: center; /* 세로 중앙 정렬 */
+  min-height: 100vh; /* 뷰포트 높이만큼 최소 높이 설정 */
+  background-color: #ffffff; /* 배경색 */
+  padding: 0px;
+  box-sizing: border-box; /* 패딩 포함 크기 계산 */
 }
 
-.main ol {
-  font-family: var(--font-geist-mono);
-  padding-left: 0;
-  margin: 0;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: -0.01em;
-  list-style-position: inside;
+/* 로고 섹션 스타일 */
+.logoSection {
+  text-align: center;
+  margin-bottom: 10px;
 }
 
-.main li:not(:last-of-type) {
+.logo {
+  width: 100%; /* 로고 이미지 크기 */
+  height: auto; /* 비율 유지 */
+  margin-bottom: 10px;
+}
+
+/* 로그인 폼 컨테이너 스타일 */
+.loginForm {
+  background-color: #ffffff;
+  padding: 20px;
+  width: 100%;
+  max-width: 400px; /* 최대 너비 설정 */
+  box-sizing: border-box;
+}
+
+/* 입력 그룹 스타일 */
+.inputGroup {
+  margin-bottom: 20px;
+}
+
+.label {
+  display: block;
+  font-size: 0.9rem;
+  color: #555;
   margin-bottom: 8px;
-}
-
-.main code {
-  font-family: inherit;
-  background: var(--gray-alpha-100);
-  padding: 2px 4px;
-  border-radius: 4px;
-  font-weight: 600;
-}
-
-.ctas {
-  display: flex;
-  gap: 16px;
-}
-
-.ctas a {
-  appearance: none;
-  border-radius: 128px;
-  height: 48px;
-  padding: 0 20px;
-  border: 1px solid transparent;
-  transition:
-    background 0.2s,
-    color 0.2s,
-    border-color 0.2s;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 16px;
-  line-height: 20px;
   font-weight: 500;
 }
 
-a.primary {
-  background: var(--foreground);
-  color: var(--background);
-  gap: 8px;
+.inputField {
+  width: 100%;
+  padding: 12px 15px;
+  border: 0px;
+  border-radius: 8px; /* 둥근 모서리 */
+  font-size: 1rem;
+  box-sizing: border-box; /* 패딩 포함 크기 계산 */
+  transition: border-color 0.3s ease;
+  background-color: #F7F7FA; /* 입력 필드 배경색 */
 }
 
-a.secondary {
-  border-color: var(--gray-alpha-200);
-  min-width: 158px;
+.inputField:focus {
+  outline: none;
+  border-color: #555555; /* 포커스 시 테두리 색상 변경 */
 }
 
-.footer {
-  grid-row-start: 3;
+.passwordHint {
+  font-size: 0.8rem;
+  color: #888;
+  margin-top: 5px;
+}
+
+/* 로그인 버튼 스타일 */
+.loginButton {
+  width: 100%;
+  padding: 10px;
+  background-color: #29AEB1; /* 파란색 배경 */
+  color: #ffffff;
+  border: none;
+  border-radius: 8px; /* 둥근 모서리 */
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.loginButton:hover {
+  background-color: #005bb5; /* 호버 시 어두운 파란색 */
+}
+
+/* 하단 링크 섹션 스타일 */
+.bottomLinks {
   display: flex;
-  gap: 24px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+  font-size: 0.9rem;
 }
 
-.footer a {
+.link {
+  color: #555;
+  text-decoration: none;
+  padding: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: #0070f3;
+}
+
+.linkSeparator {
+  color: #ccc;
+}
+
+/* SNS 로그인 섹션 스타일 */
+.snsLoginSection {
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+
+.snsLoginText {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+/* "SNS 간편 로그인하기" 텍스트 양쪽에 선 추가 */
+.snsLoginText::before,
+.snsLoginText::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 30%; /* 선의 길이 */
+  height: 1px;
+  background-color: #ddd;
+}
+
+.snsLoginText::before {
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.snsLoginText::after {
+  right: 0;
+  transform: translateY(-50%);
+}
+
+
+.snsButtons {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* 버튼 사이 간격 */
+}
+
+.snsButton {
+  background-color: transparent;
+  border-radius: 50%; /* 원형 버튼 */
+  width: 60px; /* 버튼 크기 */
+  height: 60px; /* 버튼 크기 */
   display: flex;
   align-items: center;
-  gap: 8px;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0; /* 패딩 제거 */
 }
 
-.footer img {
-  flex-shrink: 0;
+.snsIcon {
+  border-radius: 50%; /* 이미지도 원형으로 */
 }
 
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  a.primary:hover {
-    background: var(--button-primary-hover);
-    border-color: transparent;
-  }
-
-  a.secondary:hover {
-    background: var(--button-secondary-hover);
-    border-color: transparent;
-  }
-
-  .footer a:hover {
-    text-decoration: underline;
-    text-underline-offset: 4px;
-  }
-}
-
+/* 반응형 디자인 */
 @media (max-width: 600px) {
-  .page {
-    padding: 32px;
-    padding-bottom: 80px;
+  .loginForm {
+    padding: 30px 20px;
   }
 
-  .main {
-    align-items: center;
+  .logoText {
+    font-size: 2.5rem;
   }
 
-  .main ol {
-    text-align: center;
+  .logoSubText {
+    font-size: 1rem;
   }
 
-  .ctas {
-    flex-direction: column;
+  .snsButtons {
+    gap: 20px;
   }
 
-  .ctas a {
-    font-size: 14px;
-    height: 40px;
-    padding: 0 16px;
+  .snsButton {
+    width: 50px;
+    height: 50px;
+    border: #ffffff;
   }
 
-  a.secondary {
-    min-width: auto;
+  .snsIcon {
+    width: 50px !important;
+    height: 50px !important;
   }
 
-  .footer {
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .logo {
-    filter: invert();
+  .snsLoginText::before,
+  .snsLoginText::after {
+    width: 20%;
   }
 }
