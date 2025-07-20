@@ -60,7 +60,7 @@ export default function HomePage() {
       <section className={styles.menuCards}>
         <div className={styles.card}>
           <img src="/images/group_search.png" alt="group_search" className={styles.cardIcon} />
-          <span className={styles.cardText}>요양보호사 조회</span>
+          <span className={styles.cardText}>요양보호사<br />조회</span>
         </div>
         <div className={styles.card}>
           <img src="/images/campaign.png" alt="campaign" className={styles.cardIcon} />
