@@ -19,7 +19,6 @@ export default function LoginPage() {
             type="email"
             id="email"
             className={styles.inputField}
-            placeholder="이메일 주소를 입력해주세요"
           />
         </div>
 
@@ -30,7 +29,6 @@ export default function LoginPage() {
             type="password"
             id="password"
             className={styles.inputField}
-            placeholder="비밀번호를 입력해주세요"
           />
           <p className={styles.passwordHint}>영문+숫자, 8자리 이상</p>
         </div>
@@ -40,7 +38,7 @@ export default function LoginPage() {
 
         {/* 하단 링크 섹션 (회원가입, 이메일 찾기, 비밀번호 찾기) */}
         <div className={styles.bottomLinks}>
-          <a href="#" className={styles.link}>회원가입</a>
+          <a href="/signup" className={styles.link}>회원가입</a>
           <span className={styles.linkSeparator}>|</span>
           <a href="#" className={styles.link}>이메일 찾기</a>
           <span className={styles.linkSeparator}>|</span>
